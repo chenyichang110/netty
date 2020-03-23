@@ -21,7 +21,6 @@ public class NIOFileChannel01 {
     //开始写入到通道中
     //需要先反转 buffer
     byteBuffer.flip();
-
     fileChannel.write(byteBuffer);
 
     fileOutputStream.close();
