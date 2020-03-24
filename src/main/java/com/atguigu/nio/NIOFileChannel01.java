@@ -4,12 +4,15 @@ import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+/**
+ * FileChannel 案例1：写入文件
+ */
 public class NIOFileChannel01 {
 
   public static void main(String[] args) throws Exception {
     String str = "helloworld";
     //输出流
-    FileOutputStream fileOutputStream = new FileOutputStream("E:\\file01.txt");
+    FileOutputStream fileOutputStream = new FileOutputStream("file01.txt");
     //得到通道
     FileChannel fileChannel = fileOutputStream.getChannel();
 
