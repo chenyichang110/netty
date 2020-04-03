@@ -28,7 +28,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     //如果这里有一个耗时非常长的业务
     //处理方法： 异步执行  NioEventLoop 里面的taskQueue
 
-    //方案一：用户程序自定义的普通任务
+    //方案一：用户程序自定义的普通任务（队列里是一个线程执行）
     ctx.channel().eventLoop().execute(new Runnable() {
       @Override
       public void run() {
@@ -75,7 +75,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     System.out.println("server ctx = " + ctx);
     System.out.println("channel 和 pipeline的关系");
     Channel channel = ctx.channel();
-    ChannelPipeline pipeline = ctx.pipeline();
+    ChannelPipeline pipeline = ctx.pipeline();//本质是一个双向链表
 
     //将msg转成一个ByteBuf
     ByteBuf buf = (ByteBuf) msg;
