@@ -1,5 +1,6 @@
 package com.atguigu.hashcode;
 
+import java.nio.ByteBuffer;
 import org.junit.Test;
 
 public class HashCodeTest {
@@ -49,5 +50,13 @@ public class HashCodeTest {
      *         return h;
      *     }
      */
+  }
+
+
+  @Test
+  public void test_All(){
+    String s = new String(new char[]{'A', 'b'});
+    String str = "AAA";
+    System.out.println(s);
   }
 }

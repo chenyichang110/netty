@@ -3,7 +3,6 @@ package com.atguigu.netty.buf;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.util.CharsetUtil;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class NettyByteBuf02 {
